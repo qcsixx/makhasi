@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+/* Gaya dasar untuk tautan */
+.w-50.text-md-right a {
+    color: #fff; /* Warna teks default */
+    text-decoration: none; /* Menghapus garis bawah */
+}
+
+/* Gaya untuk efek hover */
+.w-50.text-md-right a:hover {
+    color: #ffbe33; /* Warna kuning saat dihover */
+}
+
