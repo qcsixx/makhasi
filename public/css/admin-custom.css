@@ -1,0 +1,267 @@
+/* Admin Custom CSS */
+
+/* General Polish */
+.card {
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.btn-group .btn {
+    border-radius: 0.25rem;
+    margin: 0 2px;
+}
+
+/* DataTables Polish */
+table.dataTable thead th {
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f4f6f9;
+    color: #495057;
+}
+
+.img-thumbnail-admin {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.img-thumbnail-admin:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* TinyMCE Polish */
+.tox-tinymce {
+    border-radius: 0.25rem !important;
+    border: 1px solid #ced4da !important;
+}
+
+/* Drag & Drop Upload Zone */
+.upload-zone {
+    border: 2px dashed #ced4da;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.upload-zone:hover, .upload-zone.dragover {
+    border-color: #007bff;
+    background-color: #e9ecef;
+}
+
+.upload-zone input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-zone-icon {
+    font-size: 3rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.upload-zone-text {
+    font-size: 1.1rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.upload-zone-subtext {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.upload-preview-container {
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.upload-preview-img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.upload-remove-btn {
+    margin-top: 0.5rem;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* SweetAlert2 Polish */
+.swal2-popup {
+    font-size: 0.9rem !important;
+}
+
+/* --- Makhasi Branding --- */
+:root {
+    --primary-yellow: #ffbe33;
+    --primary-yellow-hover: #e69c00;
+    --makhasi-dark: #222831;
+}
+
+/* Sidebar & Brand Area */
+.main-sidebar, .main-sidebar::before {
+    background-color: var(--makhasi-dark) !important;
+}
+
+.brand-link {
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.brand-text {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+}
+
+/* Navigation Menu */
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: var(--primary-yellow) !important;
+    color: #fff !important;
+}
+
+.nav-sidebar .nav-link:hover {
+    color: var(--primary-yellow) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-yellow) !important;
+    border-color: var(--primary-yellow) !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--primary-yellow-hover) !important;
+    border-color: var(--primary-yellow-hover) !important;
+}
+
+/* Card Accents */
+.card-primary.card-outline {
+    border-top: 3px solid var(--primary-yellow) !important;
+}
+
+.card-primary:not(.card-outline) > .card-header {
+    background-color: var(--primary-yellow) !important;
+}
+
+/* Small adjustments */
+.nav-header {
+    color: rgba(255,255,255,0.4) !important;
+}
+
+/* --- Mobile Responsiveness & Mobile-First Tweaks --- */
+
+/* Responsive Typography */
+@media (max-width: 576px) {
+    .brand-text {
+        font-size: 1.25rem !important;
+    }
+
+    .content-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Card Adjustments for Mobile */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+
+    .form-group.row {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Better spacing for mobile labels */
+    .col-form-label {
+        padding-bottom: 0.25rem;
+        font-weight: 600;
+    }
+}
+
+/* Utility: Full width buttons on tiny screens */
+@media (max-width: 480px) {
+    .btn-mobile-full {
+        width: 100% !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ensure horizontal scrolling is minimized */
+.wrapper {
+    overflow-x: hidden;
+}
+
+.table-responsive {
+    border: 0;
+}
+
+/* DataTables Responsive Child Row Polish */
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+    background-color: var(--primary-yellow) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* DataTables Button polish for mobile */
+.dt-buttons {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .dt-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dt-buttons .btn {
+        margin: 2px !important;
+        flex: 1 1 auto;
+    }
+}
+
+/* Force Table Width for DataTables Responsive Plugin */
+.dataTables_wrapper {
+    width: 100% !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Sidebar Toggle Touch Optimization */
+[data-widget="pushmenu"] {
+    padding: 0.5rem 1rem !important;
+}
+
+/* Activity Log Table Specific Polish */
+#activityTable_wrapper .dtr-details {
+    width: 100%;
+}

@@ -1,0 +1,175 @@
+/* Mobile Responsiveness Improvements */
+
+/* Ensure images are responsive */
+.img-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    /* Larger buttons for easier tapping */
+    .btn {
+        min-height: 44px;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    /* Stack navigation items vertically */
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+    
+    /* Improve form inputs on mobile */
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+        min-height: 44px;
+    }
+    
+    /* Better spacing for food cards */
+    .box {
+        margin-bottom: 20px;
+    }
+    
+    /* Improve detail page layout */
+    .receipe-content-area .col-lg-6 {
+        margin-bottom: 30px;
+    }
+    
+    /* Better table display on mobile */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Improve pagination on mobile */
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Better footer layout */
+    .footer-col {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    /* Improve search bar */
+    .input-group {
+        flex-wrap: wrap;
+    }
+    
+    .input-group .form-control {
+        margin-bottom: 10px;
+    }
+}
+
+/* Standardized Button Styles */
+.btn-primary,
+.btn.delicious-btn {
+    background-color: #ffbe33 !important;
+    border-color: #ffbe33 !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn.delicious-btn:hover {
+    background-color: #ffa500 !important;
+    border-color: #ffa500 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333 !important;
+    border-color: #bd2130 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-warning {
+    background-color: #ffbe33 !important;
+    border-color: #ffbe33 !important;
+    color: white !important;
+}
+
+.btn-secondary {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+.btn-dark {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #23272b !important;
+    border-color: #1d2124 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Loading States */
+.btn.loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form Loading State */
+form.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Improve accessibility */
+.btn:focus,
+.form-control:focus {
+    outline: 2px solid #ffbe33;
+    outline-offset: 2px;
+}
+
+/* Better link styles */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
